@@ -3,8 +3,9 @@
 import React,{useEffect, useState} from 'react'
 import axios from "axios";
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+
 import toast from 'react-hot-toast/headless';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
 
@@ -63,7 +64,7 @@ const Login = () => {
       <input
        id='password'
        className='p-2 border border-gray-300 rounded-lg mb-5 focus:outline-none focus:border-gray-600 text-black'
-       type="text" 
+       type="password" 
        value={user.password}
        onChange={ (e) => setUser({...user, password: e.target.value})}
        placeholder='password'
